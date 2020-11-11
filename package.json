@@ -1,0 +1,27 @@
+{
+  "name": "discord-honeypot-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "dev": "nodemon bot.js",
+    "start": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taeganwarren/discord-honeypot-bot.git"
+  },
+  "author": "https://github.com/taeganwarren",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taeganwarren/discord-honeypot-bot/issues"
+  },
+  "homepage": "https://github.com/taeganwarren/discord-honeypot-bot#readme",
+  "dependencies": {
+    "discord.js": "^11.6.4",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
