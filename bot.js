@@ -26,6 +26,7 @@ bot.on('message', async (message) => {
             collector.on('end', (collected) => {
                 active_collectors.splice(active_collectors.indexOf(message.channel.id), 1);
                 const notify_channel = guild.channels.get(process.env.CHANNEL);
+                const ban_channel = guild.channels.get(process.env.BAN_CHANNEL);
                 const messages = collected.array();
                 let dm_embed = new RichEmbed()
                     .setTitle(message.author.username)
@@ -37,6 +38,7 @@ bot.on('message', async (message) => {
                 });
                 dm_embed.addField('Message(s)', messages_string);
                 notify_channel.send(dm_embed);
+                ban_channel.send(`?ban ${message.author.id}`);
             });
         }
     }
