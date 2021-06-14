@@ -41,7 +41,9 @@ bot.on('message', async (message) => {
         });
         dm_embed.addField('Message(s)', messages_string);
         notify_channel.send(dm_embed);
-        ban_channel.send(`?ban ${message.author.id}`);
+        ban_channel.send(
+          `!ban ${message.author.id} 9y Unsolicited Direct Message`
+        );
       });
     }
   }
